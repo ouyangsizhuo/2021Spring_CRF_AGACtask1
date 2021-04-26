@@ -36,7 +36,7 @@ git clone https://github.com/ouyangsizhuo/2021Spring_CRF_AGACtask1.git
 ## 训练模型
 
 ```
-wapiti train -a agd-l1 -t 3 -i 10 -p pat/Tok321dis.pat <(cat AGAC/train_split/*.txt) AGAC/mod/AGAC_train.mod
+wapiti train -a sgd-l1 -t 3 -i 10 -p pat/Tok321dis.pat <(cat AGAC/train_split/*.txt) AGAC/mod/AGAC_train.mod
 ```
 
 ## 预测标签
