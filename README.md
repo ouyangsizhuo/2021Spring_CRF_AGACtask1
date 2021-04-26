@@ -30,6 +30,8 @@ vim Makefile
 ```
 git clone https://github.com/ouyangsizhuo/2021Spring_CRF_AGACtask1.git
 ```
+进入工作文件夹，解压AGAC压缩包
+
 
 ## 训练模型
 
