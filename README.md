@@ -2,13 +2,13 @@
 
 ## Wapiti工作环境配置
 
-'''
+```
 git clone https://github.com/Jekub/Wapiti.git
 cd Wapiti
 make
 make install
 ./wapiti (有帮助文档输出表示安装成功)
-'''
+```
 
 注意事项：
 
@@ -16,9 +16,9 @@ make install
 
 2、如果出现报错“Permission denied”：
 
-'''
+```
 vim Makefile
-'''
+```
 
 修改PREFIX =.
 
@@ -27,25 +27,25 @@ vim Makefile
 
 ## 数据准备
 
-'''
+```
 git clone https://github.com/ouyangsizhuo/2021Spring_CRF_AGACtask1.git
-'''
+```
 
 ## 训练模型
 
-'''
+```
 wapiti train -a agd-l1 -t 3 -i 10 -p pat/Tok321dis.pat <(cat AGAC/train_split/*.txt) AGAC/mod/AGAC_train.mod
-'''
+```
 
 ## 预测标签
 
-'''
+```
 wapiti label -c -m AGAC/mod/AGAC_train.mod <(cat AGAC/test_split/*.txt) AGAC/train_out.tab
-'''
+```
 
 ## 评估结果
 
-'''
+```
 perl conllevel.pl -d $'\t' <AGAC/train_out.tab | tee AGAC/train_out.eval
-'''
+```
 
